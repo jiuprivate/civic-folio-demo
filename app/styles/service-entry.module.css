@@ -1,0 +1,75 @@
+.main {
+  max-width: 64rem;
+  margin-inline: auto;
+}
+.hero h1 {
+  text-wrap: balance;
+}
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.columns section {
+  max-width: 59ch;
+  margin-bottom: 1.25rem;
+}
+.columns h2 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0 0 0.6rem;
+}
+.columns p,
+.columns li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.columns ul {
+  padding-inline-start: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+.columns li + li {
+  margin-top: 0.3rem;
+}
+.columns aside {
+  align-self: start;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius-panel);
+  padding: clamp(1.15rem, 3vw, 2rem);
+}
+.columns aside .price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.65rem;
+  margin: 1rem 0 1.5rem;
+}
+.price strong {
+  font-size: 1.8rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.price span,
+.columns .hint {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.hint {
+  margin: 0.65rem 0 0;
+}
+.sample {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  text-underline-offset: 0.2em;
+}
+@media (min-width: 780px) {
+  :global(html[data-layout="desktop"]) .columns {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.75fr);
+    gap: 3rem;
+  }
+}

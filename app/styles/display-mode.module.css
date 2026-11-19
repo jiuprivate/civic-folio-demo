@@ -1,0 +1,44 @@
+.surface {
+  min-width: 0;
+}
+.switcher {
+  display: grid;
+  place-items: center;
+  padding: 0.8rem 1rem 1.7rem;
+}
+.switcherInner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.85rem;
+}
+.label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.options {
+  display: inline-flex;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.options button {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+}
+.options button[aria-pressed="true"] {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+@media print {
+  .switcher {
+    display: none;
+  }
+}
